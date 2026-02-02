@@ -22,121 +22,135 @@
 
 <body>
     <div>
+
         <header class="menu">
             <nav class="barra-navegacion">
                 <ul>
-                    <li class="inicio"><a href="#">Inicio</a></li>
-                    <li class="servicios"><a href="#">Servicios</a></li>
-                    <li class="proyectos"><a href="#">Proyectos</a></li>
-                    <li class="testimonios"><a href="#">Testimonios</a></li>
+                    <li class="inicio"><a href="#Inicio">Inicio</a></li>
+                    <li class="servicios"><a href="#Servicios">Servicios</a></li>
+                    <li class="proyectos"><a href="#Proyectos">Proyectos</a></li>
+                    <li class="testimonios"><a href="#Testimonios">Testimonios</a></li>
                 </ul>
             </nav>
             <button>Contáctame</button>
         </header>
-        <section class="section-biography">
+        <section class="hero-container" id="Inicio">
             <img class="photo" src="Foto.jpeg" alt="Alejandro Saldarriaga">
-            <h1 class="name">Alejandro Saldarriaga <br>Frontend Developer</h1>
-            <p class="biografia">Soy profesional con altas capacidades para trabajar en equipo,mi actitud colaborativa y
-                <em>enfoque</em> para lograr resultados, facilita la generación de un buen ambiente laboral.
-                Me caracterizo por ser creativo y proactivo, me gustran los retos, implementar nuevas <em>ideas</em>,
-                metodologias y tecnologias, generando valor en mi trabajo.
-            </p>
+            <div class="hero-text">
+                <h1 class="name">Alejandro Saldarriaga <br><span>Frontend Developer</span></h1>
+                <p class="biografia">
+                    Soy profesional con altas capacidades para trabajar en equipo, mi actitud colaborativa y
+                    <em>enfoque</em> para lograr resultados, facilita la generación de un buen ambiente laboral.
+                    Me caracterizo por ser creativo y proactivo, me gustan los retos, implementar nuevas <em>ideas</em>,
+                    metodologías y tecnologías, generando valor en mi trabajo.
+                </p>
+            </div>
         </section>
-
         <div class="icons">
             <img class="javascript" src="LogosJavascript.png" alt="javaScript">
             <img class="react" src="LogosReact.png" alt="react">
             <img class="figma" src="LogosFigma.png" alt="figma">
         </div>
-
-        <section class="seccion1">
-            <article class="article-seccion1">
-                <div>
-                    <h1 class="title-seccion">CÓMO TE PUEDO AYUDAR?</h1>
-                    <p class="text-seccion1">Servicios diseñados para llevar tus ideas del concepto a la realidad,
-                        garantizando calidad, rendimiento y una experiencia de usuario excepcional.</p>
-                </div>
-                <div class="box">
-                    <div class="item">
-                        <i class="fa-solid fa-code" style="color: #1073d3; float: inline-start;"></i><br>
-                        <h3 class="title2-seccion1">Desarrollo Frontend</h3>
-                        <p class="text2-seccion1">Creación de paginas web interactivas y adaptables con las ultimas
-                            tecnologias</p>
+        <div class="Servicios" id="Servicios">
+            <section class="seccion1">
+                <article class="article-seccion1">
+                    <div>
+                        <h1 class="title-seccion">CÓMO TE PUEDO AYUDAR?</h1>
+                        <p class="text-seccion1">Servicios diseñados para llevar tus ideas del concepto a la realidad,
+                            garantizando calidad, rendimiento y una experiencia de usuario excepcional.</p>
                     </div>
-                <div class="item">
-                    <i class="fa-regular fa-pen-to-square" style="color: #1073d3; float: inline-start;"></i>
-                    <h3 class="title3-seccion1">Diseño UI/UX</h3>
-                    <p class="text3-seccion1">Diseño de experiencias de usuario intuitivas y atractivas que deleitan a los usuarios</p>
-                </div>
-                </div>
-            </article>
-        </section>
-
-        <section class="seccion2">
-            <article class="article-seccion2">
-                <h1 class="title-seccion"> DESTACADOS</h1>
-                <div class="proyectos-destacados">
-                    <div class="proyecto1">
-                        <img src="Rozo ink.jpeg" alt="Proyecto 1" width="300" height="200" >
-                        <h3 class="title-proyecto1">Landing Page Tatuajes</h3>
-                        <p class="text-proyecto1">Pagina web para muestra de proyectos de tatuajes construida con html,
-                            css y javascript</p>
-                        <button type="button" class="link-proyecto" onclick="alert('Haz click')">Link para ver el
-                            proyecto </button>
+                    <div class="box">
+                        <div class="item">
+                            <i class="fa-solid fa-code" style="color: #1073d3; float: inline-start;"></i><br>
+                            <h3 class="title2-seccion1">Desarrollo Frontend</h3>
+                            <p class="text2-seccion1">Creación de paginas web interactivas y adaptables con las ultimas
+                                tecnologias</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-pen-to-square" style="color: #1073d3; float: inline-start;"></i><br>
+                            <h3 class="title3-seccion1">Diseño UI/UX</h3>
+                            <p class="text3-seccion1">Diseño de experiencias de usuario intuitivas y atractivas que
+                                deleitan
+                                a los usuarios</p>
+                        </div>
                     </div>
-                    <div class="proyecto2">
-                        <img src="Ecomerce.jpg" alt="Proyecto 2" width="300" height="200">
-                        <h3 class="title-proyecto1">Plataforme E-Commerce</h3>
-                        <p class="text-proyecto2">Plataforma de ventas online desarollada con React para mejorar la
-                            experiencia de compra</p>
-                        <button type="button" class="link-proyecto" onclick="alert('Haz click')">Link para ver el
-                            proyecto </button>
+                </article>
+            </section>
+        </div>
+        <div class="Destacados" id="Destacados">
+            <section class="seccion2">
+                <article class="article-seccion2">
+                    <h1 class="title-seccion"> DESTACADOS</h1>
+                    <div class="proyectos-destacados">
+                        <div class="proyecto1">
+                            <img src="Rozo ink.jpeg" alt="Proyecto 1" class="img-proyect" style="border-radius: 10px;">
+                            <h3 class="title-proyecto1">Landing Page Tatuajes</h3>
+                            <p class="text-proyecto1">Pagina web para muestra de proyectos de tatuajes construida con
+                                html,
+                                css y javascript</p><br>
+                            <button type="button" class="link-proyecto" onclick="alert('Haz click')">Link para ver el
+                                proyecto </button>
+                        </div>
+                        <div class="proyecto2">
+                            <img src="Ecomerce.jpg" alt="Proyecto 2" class="img-proyect" style="border-radius: 10px;">
+                            <h3 class="title-proyecto1">Plataforme E-Commerce</h3>
+                            <p class="text-proyecto2">Plataforma de ventas online desarollada con React para mejorar la
+                                experiencia de compra</p><br>
+                            <button type="button" class="link-proyecto" onclick="alert('Haz click')">Link para ver el
+                                proyecto </button>
+                        </div>
+                        <div class="proyecto3">
+                            <img src="odontologico.jpg" alt="Proyecto 3" class="img-proyect"
+                                style="border-radius: 10px;">
+                            <h3 class="title-proyecto1">Rediseño de Sitio Odontologico</h3>
+                            <p class="text-proyecto3">Prototipo interactivo de alta fidelidad para un consultorio dental
+                            </p>
+                            <br>
+                            <button type="button" class="link-proyecto" onclick="alert('Haz click')">Link para ver el
+                                proyecto </button>
+                        </div>
                     </div>
-                    <div class="proyecto3">
-                        <img src="odontologico.jpg" alt="Proyecto 3" width="300" height="200">
-                        <h3 class="title-proyecto1">Rediseño de Sitio Odontologico</h3>
-                        <p class="text-proyecto3">Prototipo interactivo de alta fidelidad para un consultorio dental</p><br>
-                        <button type="button" class="link-proyecto" onclick="alert('Haz click')">Link para ver el
-                            proyecto </button>
-                    </div>
-                </div>
-            </article>
-        </section>
+                </article>
+            </section>
+        </div>
         <section>
             <article>
                 <h1 class="title-seccion">DESCRUBRE COMO MI EXPERIENCIA HA AYUDADO A LAS EMPRESAS A ELEVAR SU PRESENCIA
                     EN LINEA</h1>
-                <h4>testimonios</h4>
+                <h4 class="encabezado-testimonio">testimonios</h4>
             </article>
         </section>
-        <section class="testimonio_1">
-            <div class="testimonio_container">
-                <img src="testimonio1.jpg" alt="" width="250" height="320"><br>
-                <span class="text_testimonio">El equipo superò nuestas expectativas con su profesionalismo y habilidad
-                    técnica. Nuestro nuevoo sitio web es una obra excepcional</span>
+        <div class="testimonios-container">
+            <div class="testimonio_1">
+                <div class="testimonio_container">
+                    <img src="testimonio1.jpg" alt="Testimonio 1" class="testimonio-foto"><br>
+                    <p class="text_testimonio">"El equipo superò nuestas expectativas con su profesionalismo y habilidad
+                        técnica. Nuestro nuevoo sitio web es una obra excepcional."</p>
+                </div>
             </div>
-        </section>
-        <section class="testimonio_2">
-            <div class="testimonio_container">
-                <img src="testimonio2.jpg" alt="" width="250" height="320"><br>
-                <span class="text_testimonio">El equipo superò nuestas expectativas con su profesionalismo y habilidad
-                    técnica. Nuestro nuevoo sitio web es una obra excepcional</span>
+            <div class="testimonio_2">
+                <div class="testimonio_container">
+                    <img src="testimonio2.jpg" alt="Testimonio 2" class="testimonio-foto"><br>
+                    <p class="text_testimonio">"De principio a fin, la comunicación fue impecable. Entregaron un
+                        producto de alta calidad a tiempo y dentro del presupuesto."</p>
+                </div>
             </div>
-        </section>
-        <section class="testimonio_3">
-            <div class="testimonio_container">
-                <img src="testimonio3.jpg" alt="" width="250" height="320"><br>
-                <span class="text_testimonio">El equipo superò nuestas expectativas con su profesionalismo y habilidad
-                    técnica. Nuestro nuevoo sitio web es una obra excepcional</span>
+            <div class="testimonio_3">
+                <div class="testimonio_container">
+                    <img src="testimonio3.jpg" alt="Testimonio 3" class="testimonio-foto"><br>
+                    <p class="text_testimonio">"Un socio increible con quien trabajar. Entender nuestra visión y la
+                        hicieron realidad con precisión y creatividad."</p>
+                </div>
             </div>
-        </section>
+        </div>
+
         <section>
             <article>
                 <h1 class="title-seccion">¿LISTO PARA COMENZAR TU PROYECTO?</h1>
-                <h3 class="text_testimonio">Construyamos juntos</h3>
+                <h3 class="encabezado-testimonio">Construyamos juntos</h3>
                 <p class="text-seccion-contacto">Estoy emocionado de colaborar contigo en tu próximo proyecto. Ya sea
                     que tengas una idea clara o necesites orientación, estoy aquí para ayudarte a dar vida a tus ideas.
-                    ¡Contáctame hoy mismo y comencemos a construir algo increíble juntos!</p>
+                    ¡Contáctame y comencemos a construir algo increíble juntos!</p>
                 <button type="button" class="boton-contacto" onclick="alert('Haz click')">Diligencia el
                     formulario</button>
             </article>
@@ -144,13 +158,17 @@
 
         <footer class="footer">
             <div class="redes-sociales">
-                <a href="#" class="linkedin">LinkedIn</a>
-                <a href="#" class="Whatsapp">Whatsapp</a>
-                <a href="#" class="correo">Correo</a>
-                <a href="#" class="Github">Github</a>
+                <a href="https://www.linkedin.com/in/alejandro-saldarriaga-a5755a244" class="linkedin"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #1d3a44;"></i></a>
+                <a href="http://wa.me/573107156124" class="Whatsapp" target="_blank"><i
+                        class="fa-brands fa-whatsapp fa-2xl" style="color: #1d3a44;"></i></a>
+                <a href="mailto:alejosalda6@gmail.com?subject=Estoy%20interesado%20en%20los%20servicios" class="correo"
+                    target="_blank"><i class="fa-solid fa-envelope fa-2xl" style="color: #1d3a44;"></i></a>
+                <a href="https://github.com/Alsar0" class="Github" target="_blank"><i class="fa-brands fa-github fa-2xl"
+                        style="color: #1d3a44;"></i></a>
             </div>
-            <p class="copyright">&copy; Copyright 2026 <br> Alejandro Saldarriaga. Todos los derechos reservados.</p>
-
+        </footer>
+        <p class="copyright">&copy; Copyright 2026 <br> Alejandro Saldarriaga. Todos los derechos reservados.</p>
     </div>
 
 </body>

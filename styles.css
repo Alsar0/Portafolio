@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
 body{
     background-color: #101922;
     color: #ffffff;
+    overflow-x: hidden;
 }
 header{
-    height: 50px;
+    height: auto;
+    min-height: 50px;
     display: flex;
-    justify-content: right;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 5%;
     border-bottom: 3px solid #1a232c;
 }
-
-li{
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    display: inline-block;
-    padding: 0px 30px;
-    width: -10px;
+}
+li{
+    padding: 10px 15px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
-    margin-right: 20px;
 }
 li a{
     text-decoration: none;
@@ -39,45 +44,67 @@ button{
     border: none;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
-    margin-left: 80px;
+    margin-left: 20px;
+    cursor: pointer;
 }
+
+.hero-container{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 5%;
+}
+
 section h1{
-    font-size: 40px;
+    font-size: clamp(28px, 5vw, 40px) ;
     font-family: 'Roboto Condensed', sans-serif;
-    margin-top: 100px;
     margin-bottom: 20px;
-    margin-left: 5%;
 }
 section p{
     font-size: 16px;
     font-family: 'IBM Plex Mono', monospace;
     line-height: 1.5;
-    width: 100%;
+    max-width: 600px;
     color: #b0b0b0;
-    margin-left: 5%;
+    text-align: left;
+    margin-left: 0%;
+    margin-right: auto;
+    margin-bottom: 0%;
+
 }
 em{
     color: #1073d3;
 }
+/* fotografia alejandro */
 .photo{
-    margin-right: 4%;
-    border-radius: 10%;
-    width: 350px;
-    height: 300px;
-    float: inline-end;
-    margin-left: 3%;
-    margin-top: 4%;
-    max-width: 100%;
+    border-radius: 20%;
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.3s;
+    max-width: 550px;
     opacity: 0.9;
-    filter: grayscale(30%);
+    filter: grayscale(20%);
+    margin: 0px auto;
 }
+
+/* .text-seccion1{
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+} */
+/* back de iconos */
 .icons{
     margin-left: 5%;
-    margin-top: 3%;
+    margin-top: 0%;
     display: flex;
     align-items: center;
     gap: 40px;
 }
+/* iconos de tecnologias aprendidas */
 .icons img{
     border-radius: 10%;
     background-color: #19212e;
@@ -86,14 +113,18 @@ em{
     width: 40px;
     border: 3px solid #1a232c;
 }
+/* titulo seccion como te puedo ayudar */
 .title-seccion{
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
     text-align: center;
-    margin-top: 280px;
+    width: 90%;
+    margin: 20% auto;
+    margin-bottom: 0%;
 }
+/* texto de la sección como te puedo ayudar */
 .text-seccion1{
     font-size: 16px;
     font-family: 'IBM Plex Mono', monospace;
@@ -103,27 +134,30 @@ em{
     margin-left: 27%;
     text-align: center;
 }
+/* titulo box 1 stilos */
 .title2-seccion1{
     font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: left;
-    margin-left: 5%;
+    margin-left: 7%;
 }
+/* box 1 stilos */
 .text2-seccion1{
     font-size: 13px;
     font-family: 'IBM Plex Mono', monospace;
-    width: 100%;
-    margin-left: 5;
+    width: 90%;
+    margin-left: 7%;
     color: #b0b0b0;
     text-align: left;
 }
+/* titulo box 2 stilos */
 .title3-seccion1{
     font-size: 20px;
     font-family: 'Roboto Condensed', sans-serif;
     text-align: left;
     margin-left: 7%;
-    margin-top: 30px;
 }
+/* box 2 stilos */
 .text3-seccion1{
     font-size: 13px;
     font-family: 'IBM Plex Mono', monospace;
@@ -132,7 +166,7 @@ em{
     margin-left: 7%;
     text-align: left;
 }
-.box {
+/* .box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 100px;
@@ -140,7 +174,8 @@ em{
     margin: 0 auto;
     padding: 20px;
     margin-top: 70px;
-}
+} */
+ /* manejo de las cajas e items */
 .item {
     padding: 20px;
     border: 2px solid #1d3a44;
@@ -148,15 +183,16 @@ em{
     text-align: center;
 }
 
-.proyectos-destacados{
+/* .proyectos-destacados{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    padding: 0 10%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 50px auto;
+    padding: 10px 5%;
     max-width: 2000px;
-    margin: 5% auto;
-    margin-right: 50px;
-}
+        margin-right: 50px;
+} */
+ /* titulo de cada proyecto */
 .title-proyecto1{
     font-size: 18px;
     font-family: 'Roboto Condensed', sans-serif;
@@ -164,15 +200,18 @@ em{
     text-align: center;
     color: gray ;
 }
+/* texto de los proyectos */
 .text-proyecto1, .text-proyecto2, .text-proyecto3{
     font-size: 12px;
     font-family: 'IBM Plex Mono', monospace;
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
     color: gray;
-    width: 90%;
-    
+    width: 100%;
+    margin-left: 0;
+
 }
+/* links de los proyectos */
 .link-proyecto{
     display: flex;
     flex-direction: column;
@@ -189,18 +228,180 @@ em{
     cursor: pointer;
     width: 90%;
 }
-
-
-@media (min-width: 108px) {
-    .link-proyecto{
-        margin-top: auto;
-    }
+.link-proyecto:hover{
+    background-color: gray;
 }
-
-
+/* manejo de cajas en los proyectos */
 .proyecto1, .proyecto2, .proyecto3{
     background-color: #19212e;
     border-radius: 20px;
     padding: 0%;
 
+}
+/* imagenes de los proyectos */
+.img-proyect{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+/* texto testimonio */
+.encabezado-testimonio{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: gray;
+    text-align: center;
+}
+/* .testimonios-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 50px auto;
+    padding-inline: clamp(16px, 4vw, 40px);
+
+} */
+
+/* fotos de testimonio */
+.testimonio-foto{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5% auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Texto testimonio */
+.text_testimonio{
+    font-size: 13px;
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 5% auto;
+    text-align: center;
+    color: gray;
+    width: 80%;
+}
+/* manejo de testimonio y estilización  */
+.testimonio_1, .testimonio_2, .testimonio_3{
+    border-radius: 20px;
+    padding: 10px;
+    height: auto;
+    border: 2px solid #1d3a44;
+}
+/* Parrafo de la sección contacto */
+.text-seccion-contacto{
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    width: 60%;
+    color: #b0b0b0;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* boton de formulario */
+.boton-contacto{
+    padding: 15px 30px;
+    border-radius: 25px;
+    background-color: #1073d3;
+    color: #ffffff;
+    border: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+.boton-contacto:hover{
+    background-color: #0d5bb5;
+}
+
+/* manejo del footer */
+
+footer{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-top: 3px solid #1a232c;
+    margin-top: 120px;
+}
+/* stilos a los iconos de redes sociales */
+
+.redes-sociales{
+    display: flex;
+    align-items: center;
+    gap:100px;
+    margin: 0 auto;
+    pointer-events: auto;
+}
+.redes-sociales :hover{
+    color: #ffffff;
+}
+/* stilos al copyright */
+
+.copyright{
+    font-size: 13px;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+    color: gray;
+    margin-top: 10px;
+}
+
+/* Arreglos mejoras responsivas */
+
+@media (max-width: 767px){
+    header {
+        justify-content: center;
+        flex-direction: column;
+        gap: 1px;
+    }
+    button{
+        margin-left: 0;
+        width: 50%;
+    }
+    .hero-container{
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+        gap: 30px;
+    }
+    .photo{
+        width: 250px;
+        height: 250px;
+    }
+    .name{
+        font-size: 32px;
+    }
+    .biografia{
+        font-size: 14px;
+        margin: 0 10%;
+        text-align: center;
+    }
+    .section h1, .section p{
+        margin-left: 0;
+        text-align: center;
+
+    }
+    .icons{
+        justify-content: center;
+        margin-left: 0%;
+        gap: 10px;
+    }
+    .redes-sociales{
+        gap: 30px;
+    }
+
+}
+ .box, .proyectos-destacados, .testimonios-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 10px 20px;
+    margin: 50px auto;
+    max-width: 1200px;
 }
