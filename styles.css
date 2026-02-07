@@ -42,7 +42,7 @@ li a:hover{
 }
 
 /* Manejo del botton contactame */
-button{
+#miBoton{
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #1073d3;
@@ -53,6 +53,37 @@ button{
     margin-left: 20px;
     cursor: pointer;
 }
+/* menu hamburguesa */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    
+}
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
 /* Manejo de la foto y el contenedor de biografia */
 .hero-container{
     display: flex;
@@ -358,7 +389,7 @@ footer{
 
 /* Arreglos mejoras responsivas */
 
-@media (max-width: 767px){
+@media (max-width: 768px){
     header {
         justify-content: center;
         flex-direction: column;
@@ -398,6 +429,32 @@ footer{
     }
     .redes-sociales{
         gap: 30px;
+    }
+    .menu-toggle {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .barra-navegacion {
+        position: relative;
+    }
+    .barra-navegacion ul {
+        list-style: none;
+        top: 100%;
+        left: 0;
+        position: relative;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+        background-color:#101922;
+    }
+     .barra-navegacion ul.active {
+        display: flex;
     }
 
 }
