@@ -16,6 +16,15 @@ document.addEventListener('click', (event) => {
         return; // No hacer nada si se hace clic dentro del menú o en el botón de menú
     }
     menu.classList.remove('active'); // Cerrar el menú si se hace clic fuera de él
+    menutoggle.classList.remove('active'); // Cambiar el estado del botón de menú
 });
 });
-
+// scroll top navigation
+window.addEventListener('scroll', function() {
+    const menu = document.querySelector('.menu');
+    if (this.window.scrollY > 1){
+        menu.classList.add('affix');
+    } else {
+        menu.classList.remove('affix');
+    }
+});
