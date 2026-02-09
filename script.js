@@ -21,10 +21,10 @@ document.addEventListener('click', (event) => {
 });
 // scroll top navigation
 window.addEventListener('scroll', function() {
-    const menu = document.querySelector('.menu');
-    if (this.window.scrollY > 1){
-        menu.classList.add('affix');
+    const nav = document.querySelector('.menu');
+    if (this.window.scrollY > 0){
+        nav.classList.add('affix');
     } else {
-        menu.classList.remove('affix');
+        nav.classList.remove('affix');
     }
 });
