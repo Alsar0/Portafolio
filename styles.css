@@ -28,7 +28,7 @@ nav ul{
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     gap: 10px;
 }
 li{
@@ -51,7 +51,6 @@ li a:hover{
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
     z-index: 9999;
     background-color: #101922;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
@@ -72,7 +71,7 @@ li a:hover{
     margin-left: 20px;
     cursor: pointer;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: auto;
 }
 /* Menu hamburguesa */
 .menu-toggle {
@@ -95,7 +94,7 @@ li a:hover{
     transition: all 0.3s ease;
     
 }
-
+/* transicion menu hamburguesa a X */
 .menu-toggle.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }

@@ -28,3 +28,13 @@ window.addEventListener('scroll', function() {
         nav.classList.remove('affix');
     }
 });
+// Cerrar el menú al hacer clic en un enlace
+const links = document.querySelectorAll('.barra-navegacion ul');
+const nav = document.querySelector('.barra-navegacion ul');
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        const menutoggle = document.querySelector('.menu-toggle');
+        menutoggle.classList.remove('active');});
+        
+});
