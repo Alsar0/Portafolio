@@ -27,6 +27,9 @@ nav ul{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
 }
 li{
     padding: 10px 15px;
@@ -36,21 +39,25 @@ li{
 li a{
     text-decoration: none;
     color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 li a:hover{
     color: #1073d3;
 }
 .menu.affix {
-    position: sticky !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    z-index: 1000 !important;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 9999;
     background-color: #101922;
-    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
     padding: 0 6%;
     box-sizing: border-box;
+    
 }
 
 /* Manejo del botton contactame */
@@ -65,6 +72,7 @@ li a:hover{
     margin-left: 20px;
     cursor: pointer;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 /* Menu hamburguesa */
 .menu-toggle {
@@ -138,6 +146,7 @@ em{
     opacity: 0.9;
     filter: grayscale(20%);
     margin: 0px auto;
+    margin: 10px auto;
 }
 
 /* .text-seccion1{
@@ -162,6 +171,8 @@ em{
     width: 40px;
     border: 3px solid #1a232c;
 }
+
+
 /* titulo seccion como te puedo ayudar */
 .title-seccion{
     display: flex;
@@ -180,7 +191,7 @@ em{
     width: 50%;
     color: #b0b0b0;
     margin-top: 10px;
-    margin-left: 27%;
+    margin-left: auto;
     text-align: center;
 }
 /* titulo box 1 stilos */
@@ -261,8 +272,8 @@ em{
     margin-top: 15px;
     text-align: center;
     color: gray;
-    width: 100%;
-    margin-left: 0;
+    width: 80%;
+    margin: 20px auto;
 
 }
 /* links de los proyectos */
@@ -281,6 +292,7 @@ em{
     font-size: 11px;
     cursor: pointer;
     width: 90%;
+    padding: 3%;
 }
 .link-proyecto:hover{
     background-color: gray;
@@ -360,6 +372,7 @@ em{
 .boton-contacto{
     padding: 15px 30px;
     border-radius: 25px;
+    width: auto;
     background-color: #1073d3;
     color: #ffffff;
     border: none;
@@ -410,7 +423,6 @@ footer{
 
 @media (max-width: 768px){
     header {
-        justify-content: left;
         flex-direction: column;
         gap: 1px;
     }
@@ -452,7 +464,6 @@ footer{
     .menu-toggle {
         display: flex;
         position: relative;
-        justify-content: center;
         align-items: end;
         left: 50%;
         transform: translateX(-50%);
@@ -483,5 +494,5 @@ footer{
     gap: 30px;
     padding: 10px 20px;
     margin: 50px auto;
-    max-width: 1200px;
+    max-width: 1000px;
 }
