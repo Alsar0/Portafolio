@@ -3,7 +3,7 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 160px;
 }
 
 body{
@@ -141,10 +141,9 @@ em{
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     transition: 0.3s;
-    max-width: 550px;
+    max-width: 450px;
     opacity: 0.9;
     filter: grayscale(20%);
-    margin: 0px auto;
     margin: 10px auto;
 }
 
@@ -421,6 +420,9 @@ footer{
 /* Arreglos mejoras responsivas */
 
 @media (max-width: 768px){
+    html{
+        scroll-padding-top: 160px;
+    }
     header {
         flex-direction: column;
         gap: 1px;
