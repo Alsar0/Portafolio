@@ -73,6 +73,10 @@ li a:hover{
     margin-bottom: 10px;
     margin-top: auto;
 }
+button a{
+    color: #ffffff;
+    text-decoration: none;
+}
 /* Menu hamburguesa */
 .menu-toggle {
     display: none;
@@ -154,11 +158,13 @@ em{
 } */
 /* back de iconos */
 .icons{
-    margin-left: 5%;
-    margin-top: 0%;
+    justify-content: left;
+    align-items: left;
     display: flex;
-    align-items: center;
+    margin-left: 5%;
+    margin-right:auto;
     gap: 40px;
+    flex-wrap: wrap;
 }
 /* iconos de tecnologias aprendidas */
 .icons img{
@@ -178,7 +184,7 @@ em{
     justify-content: center;
     height: auto;
     text-align: center;
-    width: 90%;
+    width: 70%;
     margin: 20% auto;
     margin-bottom: auto;
 }
@@ -446,7 +452,7 @@ footer{
     }
     .biografia{
         font-size: 14px;
-        margin: 0 10%;
+        margin: 0 auto;
         text-align: center;
     }
     .section h1, .section p{
@@ -456,8 +462,9 @@ footer{
     }
     .icons{
         justify-content: center;
-        margin-left: 0%;
+        margin-top: 0;
         gap: 10px;
+        margin: 0 auto;
     }
     .redes-sociales{
         gap: 30px;
@@ -489,6 +496,19 @@ footer{
     }
 
 }
+@media (width: 823px) and (height: 1180px) {
+    .icons{
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center;        
+        gap: 20px;                 
+        margin-left: 10% !important;  
+        margin-right: auto !important;
+        margin-top: 5%;
+        width: 100%;                
+        padding-left: 20px;         
+    }
+}
  .box, .proyectos-destacados, .testimonios-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -497,3 +517,4 @@ footer{
     margin: 50px auto;
     max-width: 1000px;
 }
+
