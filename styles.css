@@ -12,6 +12,19 @@ body {
     overflow-x: hidden;
 }
 
+/* Logo marca */
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.logo-container img {
+    width: clamp(70px, 15vw, 120px);
+    height: auto;
+    object-fit: scale-down;
+}
+
 /* Nav bar inicio,servicios, proyectos, testimonios */
 header {
     height: auto;
@@ -74,8 +87,6 @@ li a:hover {
     font-size: 14px;
     margin-left: 20px;
     cursor: pointer;
-    margin-bottom: 10px;
-    margin-top: auto;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -202,7 +213,7 @@ em {
     text-align: center;
 } */
 /* back de iconos */
-.icons{
+.icons {
     justify-content: flex-start;
     flex-wrap: wrap;
     display: flex;
@@ -306,7 +317,7 @@ em {
 }
 
 .item:hover {
-    transform:  translateY(-5px) !important;
+    transform: translateY(-5px) !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -509,11 +520,25 @@ footer {
 /* Estilos al copyright */
 
 .copyright {
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'IBM Plex Mono', monospace;
     text-align: center;
     color: gray;
-    margin-top: 10px;
+}
+
+/* logo en el footer */
+.logo-footer {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-footer:hover {
+    opacity: 1;
+    transform: scale(1.15);
 }
 
 /* Arreglos mejoras responsivas */
@@ -524,17 +549,22 @@ footer {
     }
 
     header {
-        flex-direction: column;
-        gap: 1px;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
         align-items: center;
         padding-bottom: 20px;
     }
 
+    .logo-container {
+        order: 1;
+    }
+
     #miBoton {
-        margin-left: 0;
-        width: 40%;
-        margin-top: 10px;
-        margin-bottom: 0;
+        order: 4;
+        margin: 10px auto 0 auto;
+        width: 60%;
+        text-align: center;
     }
 
     .hero-container {
@@ -584,15 +614,17 @@ footer {
     }
 
     .menu-toggle {
+        order: 2;
         display: flex;
-        position: relative;
-        align-items: end;
-        left: 50%;
-        transform: translateX(-50%);
+        position: static;
+        transform: none;
+        left: auto;
     }
 
     .barra-navegacion {
+        order: 3;
         position: relative;
+        width: 100%;
     }
 
     .barra-navegacion ul {
@@ -610,6 +642,12 @@ footer {
 
     .barra-navegacion ul.active {
         display: flex;
+    }
+
+    .copyright {
+        font-size: 10px;
+        padding: 8px;
+        margin-bottom: 20px;
     }
 
 }
